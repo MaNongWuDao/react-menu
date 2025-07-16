@@ -1,0 +1,58 @@
+.menu,
+p {
+  padding:0;
+  margin: 0;
+}
+
+.menu li {
+  list-style: none;
+  background: rgb(84, 92, 100);
+  color: #fff;
+  line-height: 50px;
+  cursor: pointer;
+}
+.menu li p{
+  position: relative;
+  padding-left: 20px;
+}
+
+.menu li p::after {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -12px;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/menu/menu-toggle.svg");
+  background-size: contain;
+}
+.menu li p.active::after {
+  background-image: url("../images/menu/menu-toggle-on.svg");
+  transform: rotate(-180deg);
+}
+.menu li p.hide::after {
+  display: none;
+}
+.menu li p.show::after {
+  display: block;
+}
+.menu .active {
+  background: rgba(67, 74, 80);
+  color: #1296db
+}
+.menu-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  background-size: contain;
+  margin-right: 5px;
+}
+
+.menu.hide {
+  display: none;
+}
+.menu.show{
+  display: block;
+}

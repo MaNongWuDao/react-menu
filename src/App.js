@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Menu from "./components/Menu/index";
+import menuList from "./data/menuData";
 
 function App() {
+  function clickMenu(item) {
+    // 这里处理用户点击后的逻辑
+    console.log(item, "---item");
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu menuList={menuList} clickMenu={clickMenu} />
     </div>
   );
 }
